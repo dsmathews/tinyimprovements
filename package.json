@@ -1,0 +1,14 @@
+{
+  "name": "tinyimprovements",
+  "version": "1.0.0",
+  "description": "Thank you notes",
+  "main": "index.js",
+  "repository": "https://github.com/dsmathews/tinyimprovements.git",
+  "author": "Darrell Mathews <smathewsbd@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.14",
+    "path": "^0.12.7"
+  }
+}
