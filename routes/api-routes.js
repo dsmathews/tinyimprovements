@@ -1,9 +1,9 @@
-const User = require('../models/user');
-const kudos = require('../models/kudos');
+const User = require('../models/User');
+const Kudos = require('../models/Kudos');
 
 module.exports = function (app) {
 
-  app.get('/api/user', function (req, res) {
+  app.get('/api/users', function (req, res) {
     User.find()
     .then(function (data) {
       res.json(data);
@@ -13,7 +13,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/api/user/:id', function (req, res) {
+  app.get('/api/users/:id', function (req, res) {
     User.find({_id: req.params.id})
     .populate('kudos')
     .then(function (data) {
@@ -24,7 +24,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/api/user', function (req, res) {
+  app.post('/api/users', function (req, res) {
     User.create(req.body)
     .then(function (data) {
       res.json(data);
@@ -35,7 +35,7 @@ module.exports = function (app) {
   });
 
   app.get('/api/kudos', function (req, res) {
-    kudos.find()
+    Kudos.find()
     .then(function (data) {
       res.json(data);
     })
@@ -53,7 +53,7 @@ module.exports = function (app) {
       to: req.body.to
     };
     console.log(newEntry);
-    kudos.create(newEntry)
+    Kudos.create(newEntry)
       .then(function (kudosData) {
       return user.findOneAndUpdate({_id: userId}, { $push: { kudos: kudosData._id } }, { new: true });
     })
