@@ -9,8 +9,8 @@ class ModeForm extends React.Component {
         modal: false,
         title: '',
         message: '',
-        from: '',
-        to: '',
+        sender: '',
+        receiver: '',
         alert: {
             type: '',
             message: ''
@@ -18,13 +18,14 @@ class ModeForm extends React.Component {
     }
 
     getUsers = () => {
-        $.get('/api/user')
+        $.get('/api/users')
             .then((result) => {
                 this.setState({ users: result.data });
             });
     }
     componentDidMount() {
         this.getUsers();
+        console.log(this.state)
     }
 
     modalToggle = () => {
@@ -32,8 +33,8 @@ class ModeForm extends React.Component {
             modal: !this.state.modal,
             title: '',
             message: '',
-            from: '',
-            to: '',
+            sender: '',
+            receiver: '',
             alert: {
                 type: '',
                 message: ''
@@ -64,10 +65,10 @@ class ModeForm extends React.Component {
         }
 
         if (this.validateForm(kudo)) {
-            $.post('/api/kudo', kudo)
+            $.post('/api/kudos', kudo)
                 .then(() => {
                     this.modalToggle();
-                    this.props.getKudos();
+                    this.props.getCards();
                 })
         } else {
             this.setState({

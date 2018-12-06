@@ -32,11 +32,12 @@ class App extends Component {
         <div className='col-md-9'>
         {this.state.cardFile.map(kudos => (
           <Kudo 
-          to={kudos.to.name}
-          from={kudos.from.name}
+          to={kudos.to}
+          from={kudos.from}
           title={kudos.title}
           message={kudos.body}
           key={kudos._id}
+        
         />
         ))}
         </div>
