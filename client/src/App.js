@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as $ from 'axios';
-import './app.css';
 import Header from './components/header';
 import Kudo from './components/Kudo';
 import ModeLoad from './components/ModeLoad';
