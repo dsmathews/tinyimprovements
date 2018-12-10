@@ -9,11 +9,11 @@ var KudosSchema = new Schema({
     type: String
   },
   from: {
-    type: Schema.Types._id.$oid,
+    type: Schema.Types.ObjectId,
     ref: "User"
   },
   to: {
-    type: Schema.Types._id.$oid,
+    type: Schema.Types.ObjectId,
     ref: "User"
   }
 });
