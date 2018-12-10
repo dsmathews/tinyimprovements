@@ -47,10 +47,11 @@ module.exports = function (app) {
   app.post('/api/kudos', function (req, res) {
     const userId = req.body.userId;
     const newEntry = {
-      title: req.body.title,
-      body: req.body.body,
       from: req.body.from,
-      to: req.body.to
+      to: req.body.to,
+      title: req.body.title,
+      body: req.body.body
+      
     };
     console.log(newEntry);
     Kudos.create(newEntry)
