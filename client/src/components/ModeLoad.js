@@ -3,7 +3,7 @@ import * as $ from 'axios';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Alert } from 'reactstrap';
 import Mode from './Mode';
 
-class ModeForm extends React.Component {
+class ModeLoad extends React.Component {
     state = {
         users: [],
         modal: false,
@@ -105,4 +105,4 @@ class ModeForm extends React.Component {
     }
 }
 
-export default ModeForm;
+export default ModeLoad;
