@@ -7,14 +7,14 @@ var UserSchema = new Schema({
     trim: true,
     required: "Username is Required"
   },
-  kudos: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "kudos"
-    }
-  ]
+  // kudos: [
+  //   {
+  //     type: Schema.Types.ObjectId,
+  //     ref: "kudos"
+  //   }
+  // ]
 });
 
-const user = mongoose.model("user", UserSchema);
+const user = mongoose.model("User", UserSchema);
 
 module.exports = user;

@@ -14,6 +14,11 @@ require('./routes/api-routes')(app);
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/kudos')
 
+app.listen(PORT, function () {
+    console.log(`App is listening on port ${PORT}`);
+});
+
+
 // const databaseUri = 'mongodb://localhost/kudos';
 
 // if (process.env.MONGODB_URI) {
@@ -31,7 +36,3 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/kudos')
 // });
 // require('./models/kudos.js');
 // require('./models/user.js');
-
-app.listen(PORT, function () {
-    console.log(`App is listening on port ${PORT}`);
-});

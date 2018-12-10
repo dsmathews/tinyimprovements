@@ -9,15 +9,15 @@ var KudosSchema = new Schema({
     type: String
   },
   from: {
-    type: String
+    type: Schema.Types.ObjectId,
+    ref: "User"
   },
   to: {
-    type: String
+    type: Schema.Types.ObjectId,
+    ref: "User"
   }
-  
-  
 });
 
-const kudos = mongoose.model("kudos", KudosSchema);
+const Kudos = mongoose.model("Kudos", KudosSchema);
 
-module.exports = kudos;
+module.exports = Kudos;
