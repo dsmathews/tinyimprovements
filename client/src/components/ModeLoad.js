@@ -20,7 +20,7 @@ class ModeLoad extends React.Component {
     getUsers = () => {
         $.get('/api/users')
             .then((result) => {
-                this.setState({ users: result.data });
+                this.setState({ result: result.data });
             })
             console.log(this.state);
     }
