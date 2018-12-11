@@ -9,10 +9,12 @@ var KudosSchema = new Schema({
     type: String
   },
   from: {
+    type: String,
     type: Schema.Types.ObjectId,
     ref: "User"
   },
   to: {
+    type: String,
     type: Schema.Types.ObjectId,
     ref: "User"
   }
