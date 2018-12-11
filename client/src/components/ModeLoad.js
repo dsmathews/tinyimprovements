@@ -22,7 +22,7 @@ class ModeLoad extends React.Component {
             .then((result) => {
                 this.setState({ result: result.data });
             })
-            console.log(this.state);
+            console.log(this.result);
     }
     componentDidMount() {
         this.getUsers();
