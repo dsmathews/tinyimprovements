@@ -35,8 +35,8 @@ class App extends Component {
           <div className='col-md-9'>
             {this.state.cardFile.map(kudo => (
               <Kudo
-                to={kudo.to}
-                from={kudo.from}
+                to={kudo.to.username}
+                from={kudo.from.username}
                 title={kudo.title}
                 message={kudo.body}
                 key={kudo._id}
