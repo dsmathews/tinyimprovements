@@ -3,8 +3,8 @@ const Kudos = require('../models/Kudos');
 
 module.exports = function (app) {
 
-  app.get('/api/users', function (req, res) {
-    User.find()
+  app.get('/api/user', function (req, res) {
+    User.find({})
       .then(function (data) {
         res.json(data);
       })

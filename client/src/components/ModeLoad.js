@@ -18,9 +18,9 @@ class ModeLoad extends React.Component {
     }
 
     getUsers = () => {
-        $.get('/api/users')
+        $.get('/api/user')
             .then((result) => {
-                this.setState({ result: result.data });
+                this.setState({ users: result.data });
             })
             console.log(this.result);
     }
@@ -86,7 +86,7 @@ class ModeLoad extends React.Component {
                 <Button className="btn" color="info" onClick={this.modalToggle}>Post Kudos</Button>
 
                 <Modal isOpen={this.state.modal} toggle={this.modalToggle} className={this.className}>
-                    <ModalHeader toggle={this.modalToggle}>THANKS!</ModalHeader>
+                    <ModalHeader toggle={this.modalToggle}>Share some happiness!</ModalHeader>
                     <ModalBody>
                         <Mode
                             users={this.state.users}
