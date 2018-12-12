@@ -83,10 +83,10 @@ class ModeLoad extends React.Component {
     render() {
         return (
             <div>
-                <Button className="btn" color="info" onClick={this.modalToggle}>Post Kudos</Button>
+                <Button className="btn" onClick={this.modalToggle}>Post Kudos</Button>
 
                 <Modal isOpen={this.state.modal} toggle={this.modalToggle} className={this.className}>
-                    <ModalHeader className='modalheader' toggle={this.modalToggle}>Share some happiness!</ModalHeader>
+                    <ModalHeader className='modalheader' toggle={this.modalToggle}><p className='heading'>Share some happiness!</p></ModalHeader>
                     <ModalBody className='modalbody'>
                         <Mode
                             users={this.state.users}
