@@ -3,6 +3,7 @@ import * as $ from 'axios';
 import Header from './components/header';
 import Kudo from './components/Kudo';
 import ModeLoad from './components/ModeLoad';
+import "../src/index.css"
 // import Mode from './components/Mode'
 
 class App extends Component {
@@ -25,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className='container'>
-        <Header />
+        <Header className='header' />
         <div className='row'>
           <div className='col-md-3'>
             <ModeLoad
@@ -34,7 +35,6 @@ class App extends Component {
           </div>
           <div className='col-md-9'>
             {this.state.cardFile.map(kudo => (
-              console.log(this.state),
               <Kudo
                 to={kudo.to.username}
                 from={kudo.from.username}

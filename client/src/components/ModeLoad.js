@@ -86,8 +86,8 @@ class ModeLoad extends React.Component {
                 <Button className="btn" color="info" onClick={this.modalToggle}>Post Kudos</Button>
 
                 <Modal isOpen={this.state.modal} toggle={this.modalToggle} className={this.className}>
-                    <ModalHeader toggle={this.modalToggle}>Share some happiness!</ModalHeader>
-                    <ModalBody>
+                    <ModalHeader className='modalheader' toggle={this.modalToggle}>Share some happiness!</ModalHeader>
+                    <ModalBody className='modalbody'>
                         <Mode
                             users={this.state.users}
                             formChange={this.formChange}
@@ -96,9 +96,9 @@ class ModeLoad extends React.Component {
                             {this.state.alert.message}
                         </Alert>
                     </ModalBody>
-                    <ModalFooter>
-                        <Button color="primary" onClick={this.handlePost}> Post Kudo </Button>
-                        <Button color="secondary" onClick={this.modalToggle}> Cancel </Button>
+                    <ModalFooter className='modalfooter'>
+                        <Button className='btn'  onClick={this.handlePost}> Post Kudo </Button>
+                        <Button className='btn'  onClick={this.modalToggle}> Cancel </Button>
                     </ModalFooter>
                 </Modal>
             </div>

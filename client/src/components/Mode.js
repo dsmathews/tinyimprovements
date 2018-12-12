@@ -7,13 +7,13 @@ const Mode = (props) => (
       <FormGroup>
         <div>{props.users.username}</div>
         {/* Sender Dropdown Menu */}
-        <Input className="btn btn-success" type="select" name="sender" onChange={props.formChange}>
+        <Input className="btn" id='droptop' type="select" name="sender" onChange={props.formChange}>
           <option value='FROM'>FROM</option>
           {props.users.map((user) => 
           (<option value={user._id} key={user._id}>{user.username}</option>)
           )}
         </Input>
-        <Input className="btn btn-secondary" type="select" name="receiver" onChange={props.formChange}>
+        <Input className="btn" id='droptop' type="select" name="receiver" onChange={props.formChange}>
           <option value='TO'>TO</option>
           {props.users.map((user) => <option value={user._id} key={user._id}>{user.username}</option>)}
         </Input>
