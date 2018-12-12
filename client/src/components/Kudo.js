@@ -4,7 +4,7 @@ import {Card, CardTitle, CardBody, CardSubtitle, CardText} from 'reactstrap';
 const Kudo = (props) => (
     <div>
         <Card>
-            <CardBody>
+            <CardBody className='cardbody'>
                 <CardTitle>To: {props.to}</CardTitle>
                 <CardTitle>From: {props.from}</CardTitle>
                 <CardSubtitle>Title: {props.title}</CardSubtitle>
